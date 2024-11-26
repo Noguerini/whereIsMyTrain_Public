@@ -1,0 +1,245 @@
+{
+    "stationsData": [
+      {
+        "id": "ST01",
+        "name": "Estación de Albacete-Los Llanos",
+        "latitude": 39.000777,
+        "longitude": -1.848195
+      },
+      {
+        "id": "ST02",
+        "name": "Estación de Alicante-Terminal",
+        "latitude": 38.345105,
+        "longitude": -0.497390
+      },
+      {
+        "id": "ST03",
+        "name": "Estación de Antequera-Santa Ana",
+        "latitude": 37.071085,
+        "longitude": -4.71998
+      },
+      {
+        "id": "ST04",
+        "name": "Estación de Madrid-Puerta de Atocha-Almudena Grandes",
+        "latitude": 40.403703,
+        "longitude": -3.687733
+      },
+      {
+        "id": "ST05",
+        "name": "Estación de Barcelona-Sans",
+        "latitude": 41.378549,
+        "longitude": 2.139224
+      },
+      {
+        "id": "ST06",
+        "name": "Estación de Calatayud",
+        "latitude": 41.346078,
+        "longitude": -1.638773
+      },
+      {
+        "id": "ST07",
+        "name": "Estación de Campo de Tarragona",
+        "latitude": 41.1085,
+        "longitude": 1.2466
+      },
+      {
+        "id": "ST08",
+        "name": "Estación de Madrid-Chamartín-Clara Campoamor",
+        "latitude": 40.473075,
+        "longitude": -3.681760
+      },
+      {
+        "id": "ST09",
+        "name": "Estación de Ciudad Real",
+        "latitude": 38.986042,
+        "longitude": -3.913819
+      },
+      {
+        "id": "ST10",
+        "name": "Estación de Córdoba",
+        "latitude": 37.888121,
+        "longitude": -4.790585
+      },
+      {
+        "id": "ST11",
+        "name": "Estación de Burgos",
+        "latitude": 42.371198,
+        "longitude": -3.666373
+      },
+      {
+        "id": "ST12",
+        "name": "Estación de Cuenca-Fernando Zóbel",
+        "latitude": 40.034392,
+        "longitude": -2.144308
+      },
+      {
+        "id": "ST13",
+        "name": "Estación de Elche Alta Velocidad",
+        "latitude": 38.245754,
+        "longitude": -0.767254
+      },
+      {
+        "id": "ST15",
+        "name": "Estación de Figueras-Vilafan",
+        "latitude": 42.264740,
+        "longitude": 2.942970
+      },
+      {
+        "id": "ST16",
+        "name": "Estación de Gerona",
+        "latitude": 41.978949,
+        "longitude": 2.816595
+      },
+      {
+        "id": "ST17",
+        "name": "Estación de Granada",
+        "latitude": 37.183576,
+        "longitude": -3.609454
+      },
+      {
+        "id": "ST18",
+        "name": "Estación de Guadalajara-Yebes",
+        "latitude": 40.586301,
+        "longitude": -3.126162
+      },
+      {
+        "id": "ST19",
+        "name": "Estación de Huesca",
+        "latitude": 42.132559,
+        "longitude": -0.410042
+      },
+      {
+        "id": "ST21",
+        "name": "Estación de León",
+        "latitude": 42.594952,
+        "longitude": -5.582208
+      },
+      {
+        "id": "ST22",
+        "name": "Estación de Lérida Pirineos",
+        "latitude": 41.621615,
+        "longitude": 0.632767
+      },
+      {
+        "id": "ST23",
+        "name": "Estación de Loja",
+        "latitude": 37.175142,
+        "longitude": -4.135212
+      },
+      {
+        "id": "ST24",
+        "name": "Estación de Málaga-María Zambrano",
+        "latitude": 36.711162,
+        "longitude": -4.433379
+      },
+      {
+        "id": "ST26",
+        "name": "Estación de Murcia del Carmen",
+        "latitude": 37.974523,
+        "longitude": -1.130031
+      },
+      {
+        "id": "ST27",
+        "name": "Estación de Orense",
+        "latitude": 42.350777,
+        "longitude": -7.872125
+      },
+      {
+        "id": "ST28",
+        "name": "Estación de Orihuela-Miguel Hernández",
+        "latitude": 38.077730,
+        "longitude": -0.944524
+      },
+      {
+        "id": "ST29",
+        "name": "Estación de Palencia",
+        "latitude": 42.015821,
+        "longitude": -4.533593
+      },
+      {
+        "id": "ST31",
+        "name": "Estación de Villanueva de Córdoba-Los Pedroches",
+        "latitude": 38.255315,
+        "longitude": -4.571402
+      },
+      {
+        "id": "ST32",
+        "name": "Estación de Puente Genil-Herrera",
+        "latitude": 37.359352,
+        "longitude": -4.822534
+      },
+      {
+        "id": "ST33",
+        "name": "Estación de Puertollano",
+        "latitude": 38.691135,
+        "longitude": -4.111971
+      },
+      {
+        "id": "ST35",
+        "name": "Estación de Requena-Utiel",
+        "latitude": 39.522013,
+        "longitude": -1.134616
+      },
+      {
+        "id": "ST36",
+        "name": "Estación de Sanabria Alta Velocidad",
+        "latitude": 42.044627,
+        "longitude": -6.564063
+      },
+      {
+        "id": "ST38",
+        "name": "Estación de Segovia-Guiomar",
+        "latitude": 40.909906,
+        "longitude": -4.094373
+      },
+      {
+        "id": "ST39",
+        "name": "Estación de Sevilla-Santa Justa",
+        "latitude": 37.393752,
+        "longitude": -5.973197
+      },
+      {
+        "id": "ST40",
+        "name": "Estación de Tardienta",
+        "latitude": 41.975543,
+        "longitude": -0.5382008
+      },
+      {
+        "id": "ST42",
+        "name": "Estación de Valencia-Joaquín Sorolla",
+        "latitude": 39.459451,
+        "longitude": -0.381251
+      },
+      {
+        "id": "ST43",
+        "name": "Estación de Valladolid-Campo Grande",
+        "latitude": 41.642215,
+        "longitude": -4.7232
+      },
+      {
+        "id": "ST45",
+        "name": "Estación de Villena Alta Velocidad",
+        "latitude": 38.584364,
+        "longitude": -0.873969
+      },
+      {
+        "id": "ST46",
+        "name": "Estación de Zamora",
+        "latitude": 41.516301,
+        "longitude": -5.739843
+      },
+      {
+        "id": "ST47",
+        "name": "Estación de Zaragoza-Delicias",
+        "latitude": 41.659216,
+        "longitude": -0.912533
+      },
+      {
+        "id": "ST48",
+        "name": "Estación de Castellón",
+        "latitude": 39.988449,
+        "longitude": -0.052631
+      }
+    ]
+  }
+  

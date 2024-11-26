@@ -1,0 +1,22 @@
+/* Estilos.css */
+
+.tren-container {
+    position: fixed; /* Ensures the element stays in place even when scrolling */
+    bottom: 20px; /* Adjust the vertical position from the bottom */
+    right: 20px; /* Adjust the horizontal position from the right */
+    width: 220px; /* Adjust the width of the box */
+    height: 100px; /* Adjust the height of the box */
+    background-color: #fff; /* Set background color */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    border-radius: 5px; /* Add rounded corners */
+    z-index: 2000; /* Set the z-index for positioning on top of other elements */
+    display: flex; /* Allow horizontal alignment of content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Align content at bottom */
+    padding: 10px; /* Add padding for spacing */
+  }
+  
+  .tren-container h2 {
+    margin: 0; /* Remove default margin for heading */
+    font-size: 16px; /* Adjust heading font size */
+  }
