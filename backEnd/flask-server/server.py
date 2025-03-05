@@ -1,20 +1,17 @@
-# Import flask and datetime module for showing date and time
 from flask import Flask, jsonify
 from flask_cors import CORS
 import geopandas as gpd
 import time
 import threading
+import socket
 
-
-
-
-# Initializing flask app
 app = Flask(__name__)
 cors = CORS(app, origins='*')
 
+geojson_file = r"frontEnd\src\ST04_ST47.geojson"
 
-geojson_file = r"C:\Users\nogue\Desktop\UPM\Optativas\PGAA\QGIS\ST04_ST47.geojson"
-
+HOST = "127.0.0.1"
+PORT = 5225
 
 class Tracker:
     def __init__(self, filepath, scheduled_time=1.5):
@@ -23,7 +20,8 @@ class Tracker:
         self.current_lat = None
         self.current_long = None
         self.scheduled_time = scheduled_time
-        self.thread = None
+        self.client_sockets = []
+        self.lock = threading.Lock()
 
     def count_points_in_multilinestring(self):
         self.gdf = gpd.read_file(self.filepath)
@@ -37,33 +35,44 @@ class Tracker:
             line = row["geometry"]
             for point in line.coords:
                 self.current_lat, self.current_long = point
+                self.send_position()
                 time.sleep(self.time_interval)
 
     def start_tracking(self):
         self.count_points_in_multilinestring()
-        self.thread = threading.Thread(target=self.track)
-        self.thread.start()
+        tracking_thread = threading.Thread(target=self.track, daemon=True)
+        tracking_thread.start()
 
-    def get_latest_coordinates(self):
-        return self.current_lat, self.current_long
+    def send_position(self):
+        data = f"{self.current_lat},{self.current_long}"
+        with self.lock:
+            for client in self.client_sockets:
+                try:
+                    client.sendall(data.encode("utf-8"))
+                except:
+                    self.client_sockets.remove(client)
 
-    def stop_tracking(self):
-        if self.thread:
-            self.thread.join()  # Wait for the tracking thread to finish
-
+    def add_client(self, client_socket):
+        with self.lock:
+            self.client_sockets.append(client_socket)
 
 tracker = Tracker(geojson_file)
-tracker.start_tracking()  # Start tracking in a separate thread
+tracker.start_tracking()
 
+def socket_server():
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server_socket.bind((HOST, PORT))
+    server_socket.listen(5)
+    print(f"Server listening on {HOST}:{PORT}")
+    
+    while True:
+        client_socket, addr = server_socket.accept()
+        print(f"Connection from {addr}")
+        tracker.add_client(client_socket)
 
-
-@app.route("/api/users", methods=["GET"])
-def get_current_position():
-    current_lat, current_long = tracker.get_latest_coordinates()
-    return jsonify(train_position=[current_lat, current_long])
-
-
+socket_thread = threading.Thread(target=socket_server, daemon=True)
+socket_thread.start()
 	
-# Running app
 if __name__ == '__main__':
 	app.run(debug=True, port=1220)

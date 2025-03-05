@@ -70,7 +70,6 @@
 }
 .mapboxgl-ctrl-icon,
 .mapboxgl-ctrl-icon > span.arrow {
-  speak: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
