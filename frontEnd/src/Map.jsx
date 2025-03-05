@@ -6,7 +6,7 @@ import { io } from "socket.io-client";
 
 const SOCKET_SERVER_URL = "http://127.0.0.1:5225";
 const accessToken =
-  "pk.eyJ1Ijoibm9ndWVyaW5pIiwiYSI6ImNsdG81dTM2eTA2bTUycXFkd3hqcmhpYjIifQ.vbgP32F3d3qNBrZfBUK-Fw";
+  "get your own";
 
 function Map() {
   const [latitude, setLatitude] = useState(null);
